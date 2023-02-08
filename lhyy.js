@@ -5,16 +5,16 @@
 变量
 export lhyy='XXXXXXX'
 多号@或换行
-corn 0 0 * * * lhyy.js
+corn 30 7 * * * lhyy.js
 ============================================
 圈X
  重写
  [MITM]
 hostname = api.newhigh.net
  [rewrite_local]
-https://api.newhigh.net/wallet url script-request-header https://github.com/578440613/lhyy/lhyy.js
+https://api.newhigh.net/wallet url script-request-header https://raw.githubusercontent.com/578440613/lhyy/main/lhyy.js
 [task_local]
-30 7 * * *	https://github.com/578440613/lhyy/lhyy.js, tag=流海云印, enabled=true
+30 7 * * * https://raw.githubusercontent.com/578440613/lhyy/main/lhyy.js, tag=流海云印, img-url=leaf.fill.system, enabled=true
 */
 
 
