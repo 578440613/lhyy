@@ -6,16 +6,15 @@
 export lhyy='XXXXXXX'
 多号@或换行
 corn 0 0 * * * lhyy.js
-1.16号
 ============================================
 圈X
  重写
  [MITM]
-    hostname = api.newhigh.net
+hostname = api.newhigh.net
  [rewrite_local]
-    https://api.newhigh.net/wallet url script-request-header https://github.com/578440613/lhyy/lhyy.js
+https://api.newhigh.net/wallet url script-request-header https://github.com/578440613/lhyy/lhyy.js
 [task_local]
-    30 7 * * *	https://github.com/578440613/lhyy/lhyy.js, tag=流海云印, enabled=true
+30 7 * * *	https://github.com/578440613/lhyy/lhyy.js, tag=流海云印, enabled=true
 */
 
 
@@ -28,7 +27,7 @@ const debug = 0; //0为关闭调试，1为打开调试,默认为0
 
 let lhyy = ($.isNode() ? process.env.lhyy : $.getdata("lhyy")) || "";
 let lhyyArr = [];
-let msg = '【微信】1-大号 2-赫 3-哈 4-外婆\n【QQ】5-[5784] 6-[3254] 7-[3521]\n【支付宝】8-[173] 9-[133]\n\n';
+let msg = '';
 let accountTips = '';
 var count=0;
 var timestamp = Math.round(new Date().getTime() / 1000).toString();
@@ -45,7 +44,7 @@ var timestamp = Math.round(new Date().getTime() / 1000).toString();
                 8 * 60 * 60 * 1000).toLocaleString()} \n=============================================\n`);
 
 
-            log(`\n============ 出其东门：578440613 ============`)
+            log(`\n============ 出其东门 ============`)
             log(`\n=================== 共找到 ${lhyyArr.length} 个账号 ===================`)
             if (debug) {
                 log(`【debug】 这是你的全部账号数组:\n ${lhyyArr}`);
